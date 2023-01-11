@@ -43,10 +43,10 @@ spec:
     volumeMounts:
     - name: varlibc
       mountPath: /var/lib/containers
-    securityContext:
-      allowPrivilegeEscalation: false
-      runAsUser: 0
-      privileged: false
+#    securityContext:
+#      allowPrivilegeEscalation: false
+#      runAsUser: 0
+#      privileged: false
 
   - name: build-push
     image: quay.io/buildah/stable
@@ -54,10 +54,10 @@ spec:
     volumeMounts:
     - name: varlibc
       mountPath: /var/lib/containers
-    securityContext:
-      allowPrivilegeEscalation: false
-      runAsUser: 0
-      privileged: false
+#    securityContext:
+#      allowPrivilegeEscalation: false
+#      runAsUser: 0
+#      privileged: false
 
   volumes:
   - name: varlibc
