@@ -8,13 +8,13 @@ spec:
   serviceAccountName: pipeline
   params:
   - name: buildRevision
-    value: '56512b4a01fc91026b0d42ba2febb1b61c291903'
+    value: '8749ac9650a2e8d0af23d511c0ee5b780be5e99c'
   - name: appGitUrl
-    value: 'git@github.com:sdaschner/coffee-testing.git'
+    value: 'git@github.com:anmiralles/coffee-testing.git'
   - name: configGitUrl
-    value: 'git@github.com:sdaschner/coffee-testing-config.git'
+    value: 'git@github.com:anmiralles/coffee-testing-config.git'
   - name: appImage
-    value: 'docker.sebastian-daschner.com/coffee-testing'
+    value: 'docker.io/anmiralles/coffee-testing'
   workspaces:
   - name: app-source
     emptyDir: {}
