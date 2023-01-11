@@ -33,10 +33,10 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        readinessProbe:
-          exec:
-            command: ["sh", "-c", "curl -s http://localhost:8080/health | grep -q coffee-shop"]
-          initialDelaySeconds: 15
+#        readinessProbe:
+#          exec:
+#            command: ["sh", "-c", "curl -s http://localhost:8080/health | grep -q coffee-shop"]
+#          initialDelaySeconds: 15
       imagePullSecrets:
       - name: regsecret
       restartPolicy: Always
