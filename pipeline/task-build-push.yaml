@@ -44,11 +44,13 @@ spec:
     - name: varlibc
       mountPath: /var/lib/containers
     securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+          - ALL
       runAsNonRoot: true
-#    securityContext:
-#      allowPrivilegeEscalation: false
-#      runAsUser: 0
-#      privileged: false
+      seccompProfile:
+        type: RuntimeDefault
 
   - name: build-push
     image: quay.io/buildah/stable
@@ -57,11 +59,13 @@ spec:
     - name: varlibc
       mountPath: /var/lib/containers
     securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+          - ALL
       runAsNonRoot: true
-#    securityContext:
-#      allowPrivilegeEscalation: false
-#      runAsUser: 0
-#      privileged: false
+      seccompProfile:
+        type: RuntimeDefault
 
   volumes:
   - name: varlibc
